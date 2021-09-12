@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "GOD",
   "main": "dist/bot.js",
+  "type": "module",
   "scripts": {
     "start": "node dist/bot.js",
     "build": "tsc --build"

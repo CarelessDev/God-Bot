@@ -1,7 +1,7 @@
 // * 神だ
 
 import { Client } from "discord.js";
-import * as chalk from "chalk";
+import chalk from "chalk";
 import * as fs from "fs/promises";
 
 const client = new Client();
