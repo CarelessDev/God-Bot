@@ -8,10 +8,18 @@ const client = new Client();
 
 client.on("ready", () => {
     console.log(chalk.green(`God Bot mounted as ${client.user?.tag}`));
-    client.user?.setActivity({ 
-        name: "With other Gods",
-        type: "PLAYING"
-    });
+    setInterval(() => {
+        try {
+            client.user?.setActivity({
+                name: "With Other Gods",
+                type: "PLAYING",
+            });
+        }
+        catch (err) {
+            console.log(chalk.red(`Error Setting Status: ${err}`));
+        }
+    },
+        1000 * 60 * 5);
 });
 
 (async () => {
@@ -24,5 +32,4 @@ client.on("ready", () => {
         console.log(chalk.red(`God Bot cannot be mounted: ${err}`));
         process.exit(1);
     }
-}
-)();
+})();
